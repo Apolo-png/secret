@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Inter;
+  src: url(Inter.ttf);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+  font-family: "inter";
+}
+body {
+  overflow-x: hidden;
+  color: #232323;
+  font-weight: 500;
+  background-color: #ffbcca;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+img,
+picture,
+video,
+iframe {
+  max-width: 100%;
+}
