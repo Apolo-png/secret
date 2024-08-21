@@ -36,7 +36,6 @@ button {
   cursor: pointer;
 }
 button:disabled {
-  color: inherit;
   cursor: no-drop;
 }
 h1 {
@@ -49,20 +48,22 @@ h1 {
   margin-bottom: 2rem;
 }
 h2 {
+  font-size: 1.25rem;
   margin-block: 0.75rem;
 }
 .main {
   background-color: white;
-  width: 93vw;
-  padding-inline: 2rem;
-  padding-block: 3rem;
-  border-radius: 1.5em;
+  width: 95vw;
+  padding-inline: 1.5rem;
+  padding-block: 2rem;
+  border-radius: 1em;
   transition: height 0.3s;
 }
 .btn-resposta {
   font-weight: 500;
   width: 100%;
   background: white;
+  color: inherit;
   border: 1px solid #222;
   padding: 0.6rem;
   font-size: 0.9em;
@@ -75,7 +76,12 @@ h2 {
     color: white;
   }
 }
-
+.btn-resposta img {
+  aspect-ratio: 2 / 1;
+  padding: 0.75rem;
+  width: 100%;
+  object-fit: cover;
+}
 #btn-prox {
   margin-top: 1rem;
   background: #ec365d;
@@ -83,7 +89,7 @@ h2 {
   font-weight: 600;
   padding: 0.5em 0.6em;
   border-radius: 0.6em;
-  width: 14rem;
+  width: 100%;
   margin-inline: auto;
   transition: background 0.3s;
   display: none;
@@ -93,8 +99,109 @@ h2 {
 }
 
 .certo {
-  background: #9aeabc;
+  border-color: #056b31;
+  color: #056b31;
+  background: #98fac3;
 }
 .errado {
-  background: #ff9393;
+  color: #b92243;
+  border-color: #b92243;
+  background: #ffbcca;
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+strong {
+  color: #ec365d;
+}
+.cursorcerto {
+  background: url(../img/certo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: blink 0.75s;
+  width: 15rem;
+  height: 15rem;
+}
+.cursorerrado {
+  background: url(../img/explosion.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: scale-up 0.75s;
+  width: 20rem;
+  height: 20rem;
+}
+@keyframes scale-up {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  4% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  14% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  15% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  24% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  34% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  35% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  44% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }

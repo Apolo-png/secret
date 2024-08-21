@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>❤️</title>
   </head>
@@ -20,9 +20,22 @@
           <button class="btn btn-resposta">Resposta 3</button>
           <button class="btn btn-resposta">Resposta 4</button>
         </div>
+        <div id="explicacao"></div>
         <button id="btn-prox">Próxima Pergunta :3</button>
       </div>
     </div>
+
+    <audio loop id="ost">
+      <source src="assets/sound/ost.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="explosion">
+      <source src="assets/sound/explosion.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="correct">
+      <source src="assets/sound/correto.mp3" type="audio/mpeg" />
+    </audio>
   </body>
-  <script src="/assets/js/script.js"></script>
+  <script src="assets/js/questionario.js"></script>
+  <script src="assets/js/backgroundmusic.js"></script>
 </html>
